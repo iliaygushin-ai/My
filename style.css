@@ -1,0 +1,1721 @@
+/* ==========================================================
+   МИР СКОРОСТИ — единый стиль
+   ========================================================== */
+:root{
+    --bg:#0d1117;--bg2:#161b22;--bg3:#21262d;--deep:#10161c;
+    --bd:#30363d;--bd2:#21262d;--bd3:#484f58;
+    --tx:#c9d1d9;--dim:#8b949e;--light:#f0f6fc;--faint:#484f58;
+    --blue:#58a6ff;--blue2:#1f6feb;--blue3:#388bfd;
+    --green:#3fb950;--green2:#238636;--green3:#2ea043;--greenw:#26a17b;
+    --red:#f85149;--red2:#da3633;--red3:#b62324;
+    --gold:#d29922;--gold2:#f0c674;--purple:#8e44ad;
+    --r:6px;--r2:8px;--r3:10px;
+    --sh:0 4px 15px rgba(0,0,0,.8);--sh2:0 2px 5px rgba(0,0,0,.5);
+    --ins:inset 0 1px 0 rgba(255,255,255,.2);
+    --gb:linear-gradient(180deg,#388bfd 0%,#1f6feb 100%);
+    --gbr:linear-gradient(180deg,#1f6feb 0%,#388bfd 100%);
+    --gg:linear-gradient(180deg,#2ea043 0%,#238636 100%);
+    --ggr:linear-gradient(180deg,#238636 0%,#2ea043 100%);
+    --gr:linear-gradient(180deg,#da3633 0%,#b62324 100%);
+    --go:linear-gradient(180deg,#d29922 0%,#b8860b 100%);
+}
+*{margin:0;padding:0;border:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;outline:0}
+body{background:var(--bg) linear-gradient(180deg,#0d1117 0%,#161b22 100%);color:var(--tx);font-size:13px;line-height:1.4;text-align:center;padding:5px;min-height:100vh}
+.wap-container{max-width:480px;margin:0 auto;background:var(--bg);border:1px solid var(--bd);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh)}
+
+/* --- Шапка --- */
+.header{background:var(--bg2);padding:12px 10px;border-bottom:2px solid var(--bd2);text-transform:uppercase;font-style:italic;font-weight:bold;font-size:22px;letter-spacing:1px;color:#e6edf3;text-shadow:1px 1px 0 #000,-1px -1px 0 #444,0 0 5px rgba(255,255,255,.2)}
+.header span{color:var(--blue);font-size:18px;display:block;margin-top:3px;text-shadow:0 0 8px rgba(88,166,255,.5)}
+.banner{background:linear-gradient(90deg,var(--blue2),var(--blue3));color:#fff;padding:8px;font-weight:bold;font-size:13px;text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--blue2)}
+
+/* --- Навигация --- */
+.nav-tabs{display:flex;background:var(--bg2);border-bottom:1px solid var(--bd)}
+.nav-tabs a{flex:1;padding:9px 3px;color:var(--dim);text-decoration:none;font-size:12px;border-right:1px solid var(--bd);transition:background .2s}
+.nav-tabs a:last-child{border-right:0}
+.nav-tabs a.active{background:var(--bg3);color:#fff;font-weight:bold;border-bottom:2px solid var(--blue)}
+.nav-tabs a:active{background:var(--blue2);color:#fff}
+
+/* --- Верхняя панель --- */
+.top-bar{display:flex;justify-content:space-between;background:var(--bg2);padding:5px 8px;font-size:11px;border-bottom:1px solid var(--bd2);color:var(--dim)}
+.usdt{color:var(--greenw);font-weight:bold}
+.level-bar{background:var(--bg2);padding:4px 8px;font-size:10px;border-bottom:2px solid var(--bd2)}
+.level-progress{height:4px;background:var(--bg3);margin-top:3px;border-radius:2px;overflow:hidden}
+.level-progress-bar{height:100%;background:linear-gradient(90deg,var(--blue2),var(--blue3))}
+.section-header{display:flex;justify-content:space-between;align-items:center;padding:10px 15px;background:var(--bg);border-bottom:1px solid var(--bd2)}
+.section-header h2{font-size:16px;color:var(--light);text-transform:uppercase;letter-spacing:.5px;font-style:italic}
+
+/* --- Кнопки --- */
+.btn{display:inline-block;background-image:var(--gb);color:#fff;text-decoration:none;padding:12px 30px;border-radius:var(--r);font-weight:bold;font-size:14px;text-transform:uppercase;border:1px solid var(--blue);box-shadow:var(--sh2),var(--ins);cursor:pointer;transition:all .2s}
+.btn:active{background-image:var(--gbr);box-shadow:inset 0 2px 5px rgba(0,0,0,.5);transform:translateY(1px)}
+.btn-block{width:100%;display:block}
+.btn-danger{background-image:var(--gr)!important;border-color:var(--red)!important}
+.btn-add{background:var(--gg);color:#fff;text-decoration:none;font-weight:bold;padding:4px 12px;border-radius:4px;border:1px solid var(--green);font-size:16px}
+.btn-add:active{background:var(--green3)}
+.btn-icon{background:linear-gradient(180deg,var(--bg3) 0%,var(--bg2) 100%);border:1px solid var(--bd);color:var(--tx);padding:4px 8px;border-radius:4px;text-decoration:none;font-size:12px}
+
+/* --- Формы --- */
+.form-group{margin-bottom:15px;text-align:left}
+.form-group label,.admin-field label{display:block;font-size:11px;color:var(--dim);margin-bottom:5px;text-transform:uppercase;letter-spacing:.5px}
+.form-group input{width:100%;background:var(--bg2);border:1px solid var(--bd);color:var(--light);padding:12px 10px;border-radius:var(--r);font-size:14px;transition:border-color .2s}
+.form-group input:focus{border-color:var(--blue);box-shadow:0 0 5px rgba(88,166,255,.3)}
+
+/* --- Сообщения --- */
+.message{padding:10px;border-radius:var(--r);margin-bottom:15px;font-size:12px;text-align:center;font-weight:bold}
+.message.error{background:rgba(248,81,73,.1);color:var(--red);border:1px solid rgba(248,81,73,.4)}
+.message.success{background:rgba(46,160,67,.1);color:var(--green);border:1px solid rgba(46,160,67,.4)}
+
+.content{padding:25px 15px}
+.content h2{font-size:16px;color:var(--light);margin-bottom:15px;text-transform:uppercase}
+.content p{color:var(--dim);margin-bottom:20px;font-size:13px}
+
+/* ==========================================================
+   МАШИНЫ
+   ========================================================== */
+.car-img{display:block;max-width:75%;max-height:110px;width:auto;height:auto;margin:0 auto;object-fit:contain;filter:drop-shadow(0 6px 12px rgba(0,0,0,.7));transition:transform .3s;-webkit-user-drag:none;user-select:none}
+.car-no-image{color:var(--faint);font-size:12px;padding:40px 10px;border:1px dashed var(--bd);border-radius:var(--r);margin:15px}
+.car-viewport{position:relative;width:100%;background:radial-gradient(ellipse at center,rgba(88,166,255,.12) 0%,rgba(13,17,23,0) 75%);padding:15px 0 5px;min-height:150px;margin-top:5px;border-top:1px solid var(--bd2);display:flex;flex-direction:column;justify-content:center;align-items:center}
+.car-viewport .car-img{max-width:80%;max-height:120px}
+.car-stance-info{text-align:center;font-size:11px;color:var(--dim);padding:8px;border-top:1px solid var(--bd2);background:var(--bg);width:100%}
+.car-stance-info span{color:var(--blue);font-weight:bold;font-size:13px}
+.car-info{padding:10px 15px;background:var(--bg2);display:flex;justify-content:space-between;align-items:flex-start}
+.car-details{text-align:left}
+.car-name{color:#e6edf3;font-weight:bold;font-size:14px;margin-bottom:4px}
+.car-stats{color:var(--dim);font-size:12px}
+.car-stats .hp{color:var(--gold);font-weight:bold}
+.car-stats .class{color:var(--blue);font-weight:bold}
+.car-plate-box{text-align:right}
+.car-plate{background:var(--light);color:var(--bg);font-weight:bold;font-size:12px;padding:2px 6px;border-radius:3px;display:inline-block;border:2px solid var(--bd);margin-bottom:5px}
+.car-actions{display:flex;gap:5px;justify-content:flex-end}
+.message-log{background:#1f2937;color:#9ca3af;font-size:11px;padding:8px;border-top:1px solid var(--bd);border-bottom:1px solid var(--bd)}
+.message-log .highlight{color:var(--blue)}
+.car-controls{display:flex;background:var(--bg2);border-bottom:1px solid var(--bd)}
+.car-controls a{flex:1;padding:10px 4px;color:var(--tx);text-decoration:none;font-size:12px;font-weight:bold;border-right:1px solid var(--bd);text-transform:uppercase}
+.car-controls a:last-child{border-right:0}
+.car-controls a:active{background:var(--blue2);color:#fff}
+
+/* ==========================================================
+   ТЮНИНГ
+   ========================================================== */
+.tuning-panel{background:var(--bg);padding:15px;text-align:left}
+.tuning-block{background:var(--bg2);border:1px solid var(--bd);border-radius:var(--r);padding:12px;margin-bottom:12px}
+.tuning-title{font-size:12px;color:var(--dim);text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px;border-bottom:1px solid var(--bd2);padding-bottom:6px;font-weight:bold}
+.color-picker{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.color-swatch{position:relative;width:38px;height:38px;border-radius:50%;cursor:pointer;border:2px solid var(--bd);transition:all .2s;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 2px 5px rgba(0,0,0,.4)}
+.color-swatch input[type=radio]{position:absolute;opacity:0;cursor:pointer;width:100%;height:100%}
+.color-swatch .color-check{color:#fff;font-weight:bold;font-size:18px;text-shadow:0 0 3px #000,0 0 5px #000;pointer-events:none}
+.color-swatch:has(input:checked){border-color:var(--blue);box-shadow:0 0 10px rgba(88,166,255,.6),inset 0 2px 5px rgba(0,0,0,.4)}
+.stance-slider{padding:5px 0}
+.slider{width:100%;-webkit-appearance:none;appearance:none;height:6px;background:linear-gradient(90deg,var(--bg3),var(--blue));border-radius:3px;cursor:pointer}
+.slider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:22px;height:22px;background:var(--gb);border:2px solid var(--blue);border-radius:50%;cursor:pointer;box-shadow:0 0 8px rgba(88,166,255,.6)}
+.slider::-moz-range-thumb{width:22px;height:22px;background:var(--gb);border:2px solid var(--blue);border-radius:50%;cursor:pointer}
+.stance-labels{display:flex;justify-content:space-between;font-size:10px;color:var(--dim);margin-top:6px;text-transform:uppercase}
+.stance-labels span:nth-child(2){color:var(--blue);font-weight:bold;font-size:12px}
+
+/* ==========================================================
+   КАРТОЧКИ МАШИН (общие)
+   ========================================================== */
+.car-choice-list,.my-cars-list{display:flex;flex-direction:column;gap:15px}
+.car-choice-card,.my-car-card{background:var(--bg2);border:1px solid var(--bd);border-radius:var(--r2);overflow:hidden;transition:border-color .2s}
+.car-choice-card:hover{border-color:var(--blue)}
+.my-car-card{position:relative}
+.my-car-card.current{border-color:var(--greenw);box-shadow:0 0 12px rgba(38,161,123,.3)}
+.car-choice-preview,.my-car-preview{background:radial-gradient(ellipse at center,rgba(88,166,255,.12) 0%,rgba(13,17,23,0) 75%);padding:8px 0;border-bottom:1px solid var(--bd2);position:relative;min-height:120px;display:flex;align-items:center;justify-content:center}
+.car-choice-preview .car-img{max-width:70%;max-height:100px;margin:0 auto}
+.my-car-preview{min-height:110px;padding:10px 0}
+.my-car-preview .car-img{max-width:70%;max-height:95px}
+.car-choice-body,.my-car-body{padding:15px;text-align:left}
+.my-car-body{padding:12px 15px}
+.car-choice-name,.my-car-name{font-size:18px;color:var(--light);font-weight:bold;font-style:italic;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+.my-car-name{font-size:16px;margin-bottom:6px}
+.car-choice-desc{font-size:12px;color:var(--dim);margin-bottom:12px;line-height:1.4}
+.car-choice-row,.my-car-stats{display:flex;gap:15px;font-size:12px}
+.car-choice-row{margin-bottom:10px}
+.my-car-stats{gap:12px;margin-bottom:10px}
+.car-choice-hp,.my-car-stats .hp{color:var(--gold);font-weight:bold}
+.car-choice-class,.my-car-stats .class{color:var(--blue);font-weight:bold}
+.car-choice-price{font-size:16px;color:var(--greenw);font-weight:bold;padding:8px 0;border-top:1px solid var(--bd2);text-align:center;margin-bottom:5px}
+.car-choice-card.locked .car-choice-preview{opacity:.5}
+.car-lock-overlay{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,.85);color:var(--light);padding:6px 14px;border-radius:var(--r);font-size:12px;font-weight:bold;border:1px solid var(--blue);white-space:nowrap}
+.my-car-badge{position:absolute;top:8px;left:8px;background:var(--gg);color:#fff;font-size:10px;font-weight:bold;padding:3px 10px;border-radius:4px;text-transform:uppercase;letter-spacing:.5px;z-index:3;border:1px solid var(--green)}
+
+/* ==========================================================
+   ГОНКИ
+   ========================================================== */
+.race-vs-banner{background:linear-gradient(90deg,var(--blue2),var(--blue3));color:#fff;padding:6px;font-size:11px;font-weight:bold;letter-spacing:1.5px;text-transform:uppercase;box-shadow:0 2px 4px rgba(0,0,0,.3)}
+.opponents-list{padding:10px;display:flex;flex-direction:column;gap:8px}
+.opponent-card{background:var(--bg2);border:1px solid var(--bd);border-radius:var(--r2);overflow:hidden;display:flex;align-items:center;padding:8px 10px;gap:8px;transition:border-color .2s}
+.opponent-card:hover{border-color:var(--blue)}
+.opponent-car{width:70px;height:50px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.opponent-car .car-img{max-width:100%;max-height:48px;margin:0}
+.opponent-body{flex:1;min-width:0;text-align:left}
+.opponent-name{font-size:12px;color:var(--blue);font-weight:bold;font-style:italic;text-transform:uppercase;letter-spacing:.3px;margin-bottom:2px;display:flex;align-items:center;gap:5px;overflow:hidden}
+.opponent-nick{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0}
+.opponent-hint{font-size:11px;flex-shrink:0;line-height:1}
+.opponent-car-name{font-size:10px;color:var(--dim);margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.opponent-power{font-size:11px;color:var(--gold);font-weight:bold}
+.opponent-limit{color:var(--dim);font-weight:normal;font-size:10px;margin-left:6px}
+.opponent-card-disabled{opacity:.6}
+.opponent-action{flex-shrink:0}
+.btn-race{width:44px;height:44px;display:flex;align-items:center;justify-content:center;font-size:20px;background:var(--gg);color:#fff;border-radius:var(--r2);border:1px solid var(--green);box-shadow:var(--sh2),var(--ins);cursor:pointer;transition:all .15s;padding:0;font-family:inherit}
+.btn-race:active{background:var(--ggr);box-shadow:inset 0 2px 6px rgba(0,0,0,.5);transform:scale(.95)}
+.btn-race-disabled{width:44px;height:44px;display:flex;align-items:center;justify-content:center;font-size:20px;background:linear-gradient(180deg,var(--bg3),var(--bg2));color:var(--dim);border-radius:var(--r2);border:1px solid var(--bd3);cursor:not-allowed}
+
+.race-result{padding:8px 12px;border-radius:var(--r2);text-align:center;border:1px solid}
+.race-win{background:linear-gradient(180deg,rgba(46,160,67,.15),rgba(46,160,67,.05));border-color:rgba(46,160,67,.5)}
+.race-lose{background:linear-gradient(180deg,rgba(248,81,73,.12),rgba(248,81,73,.03));border-color:rgba(248,81,73,.4)}
+.race-result-title{font-size:14px;font-weight:bold;font-style:italic;letter-spacing:1px;margin-bottom:3px}
+.race-win .race-result-title{color:var(--green)}
+.race-lose .race-result-title{color:var(--red)}
+.race-result-line{font-size:11px;color:var(--dim);margin-bottom:3px}
+.race-result-line b{color:var(--tx)}
+.race-result-reward{font-size:13px;color:var(--greenw);font-weight:bold;margin-top:3px;padding-top:3px;border-top:1px solid rgba(255,255,255,.08)}
+.race-result-exp{font-size:11px;color:var(--blue);font-weight:bold;margin-top:3px}
+.race-actions{display:flex;gap:8px;margin-top:10px}
+.race-actions .btn{font-size:12px;padding:10px 12px;text-transform:uppercase}
+.level-up-banner{margin-top:8px;padding:8px;background:linear-gradient(180deg,rgba(210,153,34,.2),rgba(210,153,34,.05));border:1px solid var(--gold);border-radius:var(--r);color:var(--gold2);font-size:12px;font-weight:bold;text-align:center;letter-spacing:.5px;animation:lvPulse 1.5s infinite}
+@keyframes lvPulse{0%,100%{box-shadow:0 0 5px rgba(210,153,34,.4)}50%{box-shadow:0 0 15px rgba(210,153,34,.8)}}
+@keyframes livePulse{0%,100%{box-shadow:0 0 0 0 rgba(218,54,51,.7)}50%{box-shadow:0 0 0 4px rgba(218,54,51,0)}}
+
+/* ==========================================================
+   ПРОФИЛЬ
+   ========================================================== */
+.profile-header{position:relative;padding:20px 15px 15px;text-align:center;overflow:hidden}
+.profile-header-bg{position:absolute;top:0;left:0;right:0;height:100%;background:radial-gradient(ellipse at top,rgba(88,166,255,.25) 0%,rgba(13,17,23,0) 70%),linear-gradient(135deg,rgba(31,111,235,.15) 0%,rgba(13,17,23,0) 100%);z-index:0}
+.profile-avatar-wrap{position:relative;z-index:1;display:inline-block;margin-bottom:12px}
+.profile-avatar-ring{width:90px;height:90px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--blue2),var(--purple));padding:3px;box-shadow:0 0 25px rgba(88,166,255,.5)}
+.profile-avatar-inner{width:100%;height:100%;border-radius:50%;background:linear-gradient(180deg,var(--bg2),var(--bg));display:flex;align-items:center;justify-content:center;font-size:42px;font-weight:bold;font-style:italic;color:var(--blue);text-shadow:0 0 15px rgba(88,166,255,.7);border:2px solid var(--bg)}
+.profile-level-badge{position:absolute;bottom:-2px;right:-2px;width:30px;height:30px;border-radius:50%;background:linear-gradient(180deg,var(--gold2),var(--gold));color:var(--bg);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:bold;border:3px solid var(--bg);box-shadow:0 0 10px rgba(210,153,34,.7);z-index:2}
+.profile-name-block{position:relative;z-index:1}
+.profile-username{font-size:22px;font-weight:bold;font-style:italic;color:var(--light);text-transform:uppercase;letter-spacing:1px;text-shadow:1px 1px 0 #000,0 0 15px rgba(88,166,255,.4);margin-bottom:4px;word-break:break-word}
+.profile-rank{font-size:12px;font-weight:bold;color:var(--blue);letter-spacing:.5px;text-transform:uppercase}
+.profile-progress{padding:12px 15px 15px;background:var(--bg2);border-top:1px solid var(--bd2);border-bottom:1px solid var(--bd2)}
+.profile-progress-info{display:flex;justify-content:space-between;font-size:11px;color:var(--dim);margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px;font-weight:bold}
+.profile-progress-info span:first-child{color:var(--gold)}
+.profile-progress-percent{font-size:10px;color:var(--dim);text-align:center;margin-top:5px}
+.profile-current-car{padding:12px 15px;background:var(--bg);border-bottom:1px solid var(--bd2)}
+.profile-car-label{font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:1px;font-weight:bold;margin-bottom:8px;text-align:left}
+.profile-car-row{display:flex;align-items:center;gap:12px;background:linear-gradient(90deg,rgba(31,111,235,.15),rgba(13,17,23,0));border:1px solid var(--bd2);border-radius:var(--r2);padding:10px}
+.profile-car-img{width:100px;height:60px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.profile-car-img .car-img{max-width:100%;max-height:60px;margin:0}
+.profile-car-info{text-align:left;flex:1;min-width:0}
+.profile-car-name{font-size:13px;color:var(--light);font-weight:bold;font-style:italic;text-transform:uppercase;letter-spacing:.3px;margin-bottom:4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.profile-car-power{font-size:12px;color:var(--gold);font-weight:bold}
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:12px}
+.stat-box{background:linear-gradient(180deg,var(--bg2) 0%,var(--deep) 100%);border:1px solid var(--bd);border-radius:var(--r3);padding:12px 8px;text-align:center;position:relative;overflow:hidden}
+.stat-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--blue),transparent);opacity:.5}
+.stat-box.stat-green::before{background:linear-gradient(90deg,transparent,var(--green),transparent)}
+.stat-box.stat-red::before{background:linear-gradient(90deg,transparent,var(--red),transparent)}
+.stat-icon{font-size:18px;margin-bottom:4px;line-height:1}
+.stat-num{font-size:24px;font-weight:bold;color:var(--light);line-height:1;margin-bottom:4px;text-shadow:0 0 10px rgba(88,166,255,.3)}
+.stat-txt{font-size:10px;color:var(--dim);text-transform:uppercase;letter-spacing:.8px;font-weight:bold}
+.stat-box.stat-green .stat-num{color:#56d364}
+.stat-box.stat-red .stat-num{color:var(--red)}
+.stat-box.stat-blue .stat-num{color:var(--blue)}
+.earned-block{margin:0 12px 12px;padding:14px;background:linear-gradient(135deg,rgba(38,161,123,.18),rgba(38,161,123,.05));border:1px solid rgba(38,161,123,.5);border-radius:var(--r3);text-align:center}
+.earned-label{font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:1px;font-weight:bold;margin-bottom:4px}
+.earned-value{font-size:22px;font-weight:bold;color:var(--greenw);font-style:italic;text-shadow:0 0 15px rgba(38,161,123,.5)}
+.section-title-row{display:flex;align-items:center;gap:10px;padding:8px 15px}
+.section-title-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--bd),transparent)}
+.section-title-text{font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:1.5px;font-weight:bold;white-space:nowrap}
+.history-list{padding:0 12px 12px;display:flex;flex-direction:column;gap:6px}
+.history-item{display:flex;align-items:center;gap:10px;padding:10px 12px;background:linear-gradient(180deg,var(--bg2) 0%,var(--deep) 100%);border:1px solid var(--bd);border-radius:var(--r2);border-left:3px solid var(--dim)}
+.history-item.history-win{border-left-color:var(--green)}
+.history-item.history-lose{border-left-color:var(--red)}
+.history-badge{font-size:22px;width:32px;flex-shrink:0;text-align:center;line-height:1}
+.history-body{flex:1;text-align:left;min-width:0}
+.history-vs{font-size:12px;color:var(--dim);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.history-vs b{color:var(--light)}
+.history-date{font-size:10px;color:var(--faint);margin-top:3px}
+.history-reward{font-size:14px;color:var(--greenw);font-weight:bold;flex-shrink:0}
+.history-reward-lose{color:var(--faint);font-weight:normal}
+
+/* ==========================================
+   РАЙОН — сетка карточек
+   ========================================== */
+.district-map {
+    position: relative;
+    padding: 15px;
+    background: var(--bg-dark);
+    overflow: hidden;
+    min-height: 480px;
+}
+.district-bg {
+    position: absolute;
+    inset: 0;
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(88,166,255,0.12) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(210,153,34,0.1) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(38,161,123,0.06) 0%, transparent 60%),
+        linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-mid) 100%);
+}
+.district-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+        linear-gradient(rgba(88,166,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(88,166,255,0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.district-grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+/* Карточка */
+.district-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 12px;
+    background: linear-gradient(180deg, rgba(22,27,34,0.95), rgba(13,17,23,0.9));
+    border: 1px solid var(--bd);
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--light);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+    transition: all 0.15s;
+    position: relative;
+    overflow: hidden;
+    min-height: 76px;
+    text-align: left;
+}
+.district-card:active { transform: scale(0.97); }
+
+.district-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    opacity: 0.7;
+}
+
+/* Узкие карточки — вертикальное расположение */
+.district-card:not(.district-card-wide) {
+    flex-direction: column;
+    text-align: center;
+    gap: 6px;
+    padding: 14px 8px;
+}
+.district-card:not(.district-card-wide) .district-card-text {
+    text-align: center;
+}
+
+/* Широкая карточка — на всю ширину */
+.district-card-wide {
+    grid-column: span 2;
+    flex-direction: row;
+    padding: 14px 16px;
+    min-height: 72px;
+}
+
+.district-card-icon {
+    font-size: 32px;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.district-card-text { min-width: 0; }
+.district-card-text b {
+    display: block;
+    font-size: 14px;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--light);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.district-card-text small {
+    font-size: 10px;
+    color: var(--dim);
+    display: block;
+    margin-top: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Цветные полоски и свечения */
+.district-card-bar { border-color: var(--gold); }
+.district-card-bar::before { background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+.district-card-bar .district-card-icon { filter: drop-shadow(0 0 8px rgba(210,153,34,0.6)); }
+
+.district-card-tour { border-color: var(--gold); }
+.district-card-tour::before { background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+.district-card-tour .district-card-icon { filter: drop-shadow(0 0 8px rgba(210,153,34,0.6)); }
+
+.district-card-race { border-color: var(--green); }
+.district-card-race::before { background: linear-gradient(90deg, transparent, var(--green), transparent); }
+.district-card-race .district-card-icon { filter: drop-shadow(0 0 8px rgba(63,185,80,0.6)); }
+
+.district-card-saloon { border-color: var(--blue); }
+.district-card-saloon::before { background: linear-gradient(90deg, transparent, var(--blue), transparent); }
+.district-card-saloon .district-card-icon { filter: drop-shadow(0 0 8px rgba(88,166,255,0.6)); }
+
+.district-card-season {
+    border-color: var(--gold-light);
+    background: linear-gradient(135deg, rgba(210,153,34,0.15), rgba(13,17,23,0.95));
+}
+.district-card-season::before {
+    background: linear-gradient(90deg, transparent, var(--gold-light), transparent);
+    animation: seasonGlow 2s infinite;
+}
+.district-card-season .district-card-icon {
+    filter: drop-shadow(0 0 12px rgba(240,198,116,0.9));
+    animation: seasonStar 3s infinite;
+}
+.district-card-season .district-card-text b { color: var(--gold-light); }
+
+@keyframes seasonGlow {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+@keyframes seasonStar {
+    0%, 100% { transform: scale(1) rotate(0); }
+    50% { transform: scale(1.1) rotate(10deg); }
+}
+
+/* Мобильная адаптация */
+@media (max-width: 360px) {
+    .district-card-icon { font-size: 26px; }
+    .district-card-text b { font-size: 12px; }
+    .district-card-text small { font-size: 9px; }
+}
+
+/* ==========================================================
+   ЧАТ (Бар)
+   ========================================================== */
+.chat-messages{padding:10px;background:var(--bg);display:flex;flex-direction:column;gap:8px;min-height:200px;max-height:65vh;overflow-y:auto}
+.chat-empty{color:var(--faint);font-size:12px;text-align:center;padding:40px 0}
+.chat-msg{background:var(--bg2);border:1px solid var(--bd2);border-radius:var(--r2);padding:8px 10px;text-align:left}
+.chat-msg-mine{border-color:rgba(88,166,255,.4);background:linear-gradient(180deg,rgba(31,111,235,.08),rgba(13,17,23,.4))}
+.chat-msg-deleted{opacity:.55}
+.chat-msg-head{display:flex;align-items:center;gap:6px;margin-bottom:4px;font-size:11px;flex-wrap:wrap}
+.chat-nick{font-weight:bold;font-style:italic;text-transform:uppercase;letter-spacing:.3px}
+.chat-time{color:var(--faint);font-size:10px;margin-left:auto}
+.chat-msg-head .role-badge{font-size:8px;padding:1px 5px;letter-spacing:.3px}
+.chat-del{background:transparent;border:1px solid var(--bd);color:var(--dim);border-radius:4px;width:20px;height:20px;line-height:1;font-size:11px;cursor:pointer;padding:0;font-family:inherit;flex-shrink:0}
+.chat-del:active{background:var(--red2);color:#fff;border-color:var(--red)}
+.chat-text{font-size:13px;color:var(--tx);word-break:break-word;line-height:1.4}
+.chat-ban-row{margin-top:6px;padding-top:6px;border-top:1px dashed var(--bd2)}
+.chat-ban-form{display:flex;gap:4px}
+.chat-ban-form select,.chat-ban-form input{background:var(--bg);border:1px solid var(--bd);color:var(--tx);padding:4px 6px;border-radius:4px;font-size:10px;font-family:inherit;min-width:0}
+.chat-ban-form input{flex:1}
+.chat-ban-btn{background:var(--gr);border:1px solid var(--red);color:#fff;padding:4px 10px;border-radius:4px;font-size:12px;cursor:pointer;font-family:inherit}
+.chat-form{display:flex;gap:5px;padding:10px;background:var(--bg2);border-top:1px solid var(--bd2);border-bottom:1px solid var(--bd2);position:sticky;top:0;z-index:5}
+.chat-form input{flex:1;background:var(--bg);border:1px solid var(--bd);color:var(--light);padding:10px 12px;border-radius:var(--r);font-size:13px;font-family:inherit;min-width:0}
+.chat-form input:focus{border-color:var(--blue)}
+.chat-form button{background:var(--gb);border:1px solid var(--blue);color:#fff;padding:0 16px;border-radius:var(--r);font-size:16px;cursor:pointer;font-family:inherit}
+.chat-ban-banner{margin:15px;padding:15px;background:linear-gradient(180deg,rgba(248,81,73,.15),rgba(248,81,73,.05));border:1px solid rgba(248,81,73,.5);border-radius:var(--r3);text-align:center;color:var(--red)}
+
+/* ==========================================================
+   ТУРНИРЫ
+   ========================================================== */
+.tour-tabs{display:flex;background:var(--bg2);border-bottom:1px solid var(--bd2)}
+.tour-tab{flex:1;display:flex;align-items:center;justify-content:center;gap:5px;padding:10px 4px;color:var(--dim);text-decoration:none;font-size:12px;border-right:1px solid var(--bd2);position:relative}
+.tour-tab:last-child{border-right:0}
+.tour-tab.active{color:var(--gold);border-bottom:2px solid var(--gold);margin-bottom:-1px;background:var(--bg3)}
+.tour-tab-icon{font-size:14px;line-height:1}
+.tour-tab-text{font-size:10px;text-transform:uppercase;letter-spacing:.5px;font-weight:bold}
+.tour-tab-badge{position:absolute;top:5px;right:6px;background:var(--blue);color:#fff;font-size:9px;font-weight:bold;padding:1px 5px;border-radius:8px;min-width:14px;text-align:center}
+.tour-tab-badge-live{background:var(--red2)}
+.tour-list{padding:10px;display:flex;flex-direction:column;gap:8px;background:var(--bg)}
+.tour-empty{padding:40px 20px;text-align:center;color:var(--dim);font-size:12px}
+.tour-empty small{display:block;margin-top:6px;color:var(--faint);font-size:10px}
+.tour-card{display:block;background:var(--bg2);border:1px solid var(--bd);border-radius:var(--r2);padding:10px 12px;text-decoration:none;color:inherit;text-align:left;transition:border-color .15s;position:relative}
+.tour-card:active{transform:scale(.99)}
+.tour-card-live{border-color:var(--red2)}
+.tour-card-head{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:6px}
+.tour-card-title{font-size:14px;font-weight:bold;font-style:italic;color:var(--light);display:flex;align-items:center;gap:6px;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tour-live-dot{width:7px;height:7px;background:var(--red2);border-radius:50%;flex-shrink:0;animation:livePulse 1.2s infinite}
+.tour-card-status{font-size:9px;font-weight:bold;padding:2px 6px;border-radius:3px;letter-spacing:.5px;flex-shrink:0}
+.status-upcoming{background:rgba(88,166,255,.15);color:var(--blue)}
+.status-active{background:rgba(218,54,51,.15);color:var(--red)}
+.status-finished{background:rgba(139,148,158,.12);color:var(--dim)}
+.tour-type-row{display:flex;align-items:center;gap:6px;margin-bottom:6px;flex-wrap:wrap}
+.tour-type-badge{display:inline-block;font-size:10px;font-weight:bold;padding:2px 7px;border-radius:3px;letter-spacing:.3px}
+.tour-type-all{background:rgba(88,166,255,.12);color:var(--blue)}
+.tour-type-levels{background:rgba(210,153,34,.12);color:var(--gold)}
+.tour-type-classes{background:rgba(46,160,67,.12);color:var(--green)}
+.tour-type-brands{background:rgba(142,68,173,.12);color:#a855f7}
+.tour-my-badge{display:inline-block;background:rgba(46,160,67,.15);color:var(--green);font-size:10px;font-weight:bold;padding:2px 7px;border-radius:3px;border:1px solid rgba(46,160,67,.3)}
+.tour-card-info{display:flex;flex-direction:column;gap:3px;margin-bottom:8px}
+.tour-info-row{display:flex;gap:6px;font-size:11px;align-items:center}
+.tour-info-label{color:var(--dim);width:16px;flex-shrink:0}
+.tour-info-value{color:var(--tx);font-weight:bold}
+.tour-countdown{color:var(--gold)!important}
+.tour-prize-strip{display:flex;gap:4px;padding:6px 8px;background:rgba(0,0,0,.2);border-radius:5px}
+.tour-prize-item{flex:1;display:flex;align-items:center;justify-content:center;gap:4px;font-size:11px}
+.tour-prize-place{font-size:12px;line-height:1}
+.tour-prize-amount{color:var(--greenw);font-weight:bold}
+
+.tour-detail-head{padding:12px 15px;background:var(--bg2);border-bottom:1px solid var(--bd2);text-align:left}
+.tour-detail-head-live{background:linear-gradient(135deg,rgba(218,54,51,.1),var(--bg2));border-left:3px solid var(--red2)}
+.tour-detail-status{display:inline-block;font-size:10px;font-weight:bold;padding:2px 7px;border-radius:3px;letter-spacing:.5px;margin-bottom:6px}
+.tour-detail-name{font-size:18px;font-weight:bold;font-style:italic;color:var(--light);letter-spacing:.3px;margin-bottom:4px;word-break:break-word}
+.tour-detail-type{font-size:11px;color:var(--gold);font-weight:bold;margin-bottom:4px}
+.tour-detail-desc{font-size:11px;color:var(--dim);line-height:1.4}
+.tour-info-line{display:flex;justify-content:space-around;padding:10px;background:var(--bg);border-bottom:1px solid var(--bd2);font-size:11px;color:var(--tx)}
+.tour-info-line span{white-space:nowrap}
+.tour-countdown-mini{display:flex;align-items:center;justify-content:center;gap:8px;padding:8px;background:rgba(218,54,51,.08);border-bottom:1px solid var(--bd2);font-size:11px}
+.tour-countdown-mini-soon{background:rgba(210,153,34,.08)}
+.tour-countdown-label{color:var(--dim);text-transform:uppercase;font-size:10px;letter-spacing:.5px}
+.tour-countdown-time{font-size:14px;font-weight:bold;color:var(--gold);font-style:italic}
+.tour-prizes-line{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--bd2);border-bottom:1px solid var(--bd2)}
+.tour-prize-cell{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px 4px;background:var(--bg2);text-align:center;min-height:50px}
+.tour-prize-cell span{font-size:14px;line-height:1;margin-bottom:3px}
+.tour-prize-cell b{font-size:12px;color:var(--greenw);font-weight:bold}
+.tour-prize-cell small{font-size:8px;color:var(--dim);text-transform:uppercase;letter-spacing:.3px;margin-top:1px}
+.tour-tags{display:flex;flex-wrap:wrap;gap:4px;padding:8px 12px;background:var(--bg);border-bottom:1px solid var(--bd2)}
+.tour-tag{display:inline-block;font-size:10px;color:var(--tx);background:var(--bg2);border:1px solid var(--bd);padding:3px 8px;border-radius:10px}
+.tour-my-line{display:flex;align-items:center;gap:6px;padding:8px 12px;background:rgba(88,166,255,.06);border-bottom:1px solid var(--bd2)}
+.tour-my-cell{flex:1;text-align:center;padding:4px}
+.tour-my-cell b{display:block;font-size:16px;font-weight:bold;color:var(--light);font-style:italic;line-height:1}
+.tour-my-cell small{font-size:9px;color:var(--dim);text-transform:uppercase;letter-spacing:.5px;margin-top:2px;display:block}
+.tour-my-line-green{background:rgba(46,160,67,.08);border-left:3px solid var(--green)}
+.tour-ride-block{padding:10px 12px}
+.tour-ride-btn{background-image:var(--gr)!important;border-color:var(--red)!important;padding:14px!important;font-size:14px!important;font-weight:bold!important;letter-spacing:1px!important}
+.tour-ride-hint{font-size:10px;color:var(--dim);text-align:center;margin-top:6px}
+.tour-leave-btn{background:transparent;border:1px solid rgba(248,81,73,.4);color:var(--red);padding:5px 10px;border-radius:5px;font-size:10px;font-weight:bold;cursor:pointer;font-family:inherit;text-transform:uppercase;flex-shrink:0}
+.tour-my-status{display:flex;align-items:center;gap:10px;padding:10px 12px;background:rgba(46,160,67,.08);border-left:3px solid var(--green);border-bottom:1px solid var(--bd2)}
+.tour-winner-banner{margin:10px 12px;padding:15px;background:linear-gradient(135deg,rgba(240,198,116,.15),rgba(210,153,34,.03));border:1px solid rgba(210,153,34,.5);border-radius:var(--r3);text-align:center}
+.tour-winner-icon{font-size:36px;line-height:1;margin-bottom:6px}
+.tour-winner-name{font-size:18px;font-weight:bold;font-style:italic;color:var(--gold2);text-transform:uppercase;letter-spacing:.5px;word-break:break-word}
+.tour-winner-power{font-size:11px;color:var(--gold);margin-top:3px}
+.tour-join-block{padding:10px 12px}
+.tour-join-btn{background-image:var(--go)!important;border-color:var(--gold2)!important;color:#000!important;font-weight:bold!important;padding:14px!important;font-size:14px!important}
+.tour-note{font-size:10px;color:var(--dim);text-align:center;margin-top:6px}
+.tour-join-error{padding:10px;background:rgba(248,81,73,.1);border:1px solid rgba(248,81,73,.4);border-radius:var(--r);color:var(--red);font-size:11px;text-align:center}
+.tour-timer{display:flex;align-items:center;justify-content:center;gap:10px;padding:12px;background:linear-gradient(180deg,rgba(218,54,51,.08),transparent);border-bottom:1px solid var(--bd2)}
+.tour-timer-label{font-size:10px;color:var(--dim);text-transform:uppercase;letter-spacing:1px}
+.tour-timer-time{font-size:22px;font-weight:bold;font-style:italic;color:var(--red);text-shadow:0 0 15px rgba(248,81,73,.4)}
+.tour-wins-line{display:flex;justify-content:center;gap:8px;padding:8px 12px;background:var(--bg2);border-bottom:1px solid var(--bd2);font-size:11px;color:var(--dim);letter-spacing:.3px}
+.tour-wins-line b{color:var(--light);font-size:13px}
+.tour-wins-sep{color:var(--faint)}
+.tour-opp-card{display:flex;gap:12px;align-items:stretch;margin:12px;background:var(--bg2);border:1px solid var(--bd);border-radius:var(--r3);overflow:hidden;position:relative}
+.tour-opp-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--red2),transparent)}
+.tour-opp-car{width:130px;flex-shrink:0;background:radial-gradient(ellipse at center,rgba(248,81,73,.08) 0%,rgba(13,17,23,0) 75%);display:flex;align-items:center;justify-content:center;padding:8px;border-right:1px solid var(--bd2)}
+.tour-opp-car .car-img{max-width:100%;max-height:90px;margin:0}
+.tour-opp-info{flex:1;padding:10px 12px 10px 0;text-align:left;min-width:0}
+.tour-opp-vs{font-size:9px;color:var(--red);font-weight:bold;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:2px}
+.tour-opp-name{font-size:15px;font-weight:bold;font-style:italic;color:var(--light);text-transform:uppercase;letter-spacing:.3px;margin-bottom:3px;word-break:break-word}
+.tour-opp-meta{font-size:10px;color:var(--dim);margin-bottom:4px;line-height:1.3}
+.tour-opp-power{font-size:11px;color:var(--gold);font-weight:bold;margin-bottom:6px}
+.tour-spy-form{margin-top:4px}
+.tour-spy-btn{background:transparent;border:1px solid rgba(142,68,173,.5);color:#a855f7;padding:5px 10px;border-radius:5px;font-size:10px;font-weight:bold;cursor:pointer;font-family:inherit;width:100%;letter-spacing:.3px}
+.tour-spy-btn:active{background:rgba(142,68,173,.15)}
+.tour-spy-empty{font-size:10px;color:var(--faint);font-style:italic}
+.tour-waiting{margin:12px;padding:30px 15px;background:var(--bg2);border:1px dashed var(--bd);border-radius:var(--r3);text-align:center;color:var(--dim);font-size:12px;font-style:italic}
+.tour-eliminated{margin:12px;padding:25px 15px;background:linear-gradient(180deg,rgba(248,81,73,.1),rgba(248,81,73,.02));border:1px solid rgba(248,81,73,.4);border-radius:var(--r3);text-align:center}
+.tour-eliminated-icon{font-size:40px;line-height:1;margin-bottom:6px;opacity:.9}
+.tour-eliminated-title{font-size:16px;font-weight:bold;font-style:italic;color:var(--red);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+.tour-eliminated-sub{font-size:13px;color:var(--light)}
+.tour-eliminated-sub b{color:var(--gold);font-size:15px}
+.tour-eliminated-hint{font-size:10px;color:var(--dim);margin-top:8px;line-height:1.4}
+.tour-restart-block{padding:10px 12px 14px;text-align:center}
+.tour-restart-btn{background:transparent;border:1px solid rgba(210,153,34,.5);color:var(--gold);padding:8px 14px;border-radius:var(--r);font-size:11px;font-weight:bold;cursor:pointer;font-family:inherit;text-transform:uppercase;letter-spacing:.5px;width:100%}
+.tour-restart-btn:active{background:rgba(210,153,34,.1)}
+.tour-restart-btn-active{background:linear-gradient(180deg,rgba(210,153,34,.15),rgba(210,153,34,.03))!important;border-color:var(--gold)!important;color:var(--gold)!important;padding:12px!important;font-size:12px!important}
+.tour-restart-hint{font-size:10px;color:var(--faint);margin-top:4px}
+.tour-participants-block{padding:10px 12px 12px}
+.tour-participants-title{font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:1px;font-weight:bold;margin-bottom:6px;text-align:left}
+.tour-participants-empty{color:var(--faint);font-size:11px;text-align:center;padding:15px;font-style:italic}
+.tour-standings{background:var(--bg2);border:1px solid var(--bd2);border-radius:var(--r);overflow:hidden}
+.tour-standings-head,.tour-stand-row{display:grid;grid-template-columns:36px 1fr 45px;align-items:center}
+.tour-standings-head.has-spy,.tour-stand-row.has-spy{grid-template-columns:36px 1fr 45px 40px}
+.tour-standings-head.has-prize,.tour-stand-row.has-prize{grid-template-columns:36px 1fr 45px 70px}
+.tour-standings-head.has-spy.has-prize,.tour-stand-row.has-spy.has-prize{grid-template-columns:36px 1fr 45px 40px 70px}
+.tour-standings-head{background:var(--bg);border-bottom:1px solid var(--bd2);font-size:9px;color:var(--dim);text-transform:uppercase;letter-spacing:.5px;font-weight:bold;padding:5px 0}
+.tour-stand-row{padding:7px 0;border-bottom:1px solid var(--bd2);font-size:12px}
+.tour-stand-row:last-child{border-bottom:0}
+.tour-stand-row.stand-me{background:rgba(31,111,235,.08);border-left:2px solid var(--blue);margin-left:-1px}
+.tour-stand-row.stand-top{background:linear-gradient(90deg,rgba(240,198,116,.06),transparent)}
+.stand-cell{text-align:center}
+.stand-place{font-size:12px;font-weight:bold;color:var(--dim)}
+.stand-name{text-align:left;padding-left:6px;color:var(--light);font-weight:bold;font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.stand-num{font-size:12px;font-weight:bold;color:var(--tx)}
+.stand-wins{color:var(--green)}
+.stand-rides{color:var(--blue)}
+.stand-prize{color:var(--greenw);font-size:11px;font-weight:bold}
+.stand-dim{color:var(--faint);font-size:11px}
+.stand-spy{text-align:center}
+.stand-spy-btn{background:transparent;border:1px solid rgba(142,68,173,.4);color:#a855f7;width:26px;height:26px;border-radius:5px;font-size:12px;cursor:pointer;padding:0;font-family:inherit}
+.stand-spy-btn:active{background:rgba(142,68,173,.15)}
+.tour-spy-hint{margin:0 12px 12px;padding:8px;background:var(--bg2);border:1px solid var(--bd2);border-radius:var(--r);font-size:10px;color:var(--dim);text-align:center;letter-spacing:.3px}
+.tour-spy-hint b{color:#a855f7}
+.tour-cant-ride{margin:10px 12px;padding:12px;background:rgba(248,81,73,.1);border:1px solid rgba(248,81,73,.4);border-radius:var(--r);text-align:center;color:var(--red);font-size:12px;font-weight:bold}
+
+/* ==========================================================
+   АДМИНКА
+   ========================================================== */
+.admin-tabs{display:flex;background:var(--bg2);border-bottom:2px solid var(--bd2)}
+.admin-tabs a{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 3px;color:var(--dim);text-decoration:none;font-size:16px;border-right:1px solid var(--bd2);transition:background .15s}
+.admin-tabs a span{font-size:9px;text-transform:uppercase;letter-spacing:.5px;font-weight:bold}
+.admin-tabs a:last-child{border-right:0}
+.admin-tabs a.active{background:var(--bg3);color:var(--gold);border-bottom:2px solid var(--gold);margin-bottom:-2px}
+.admin-tab-exit{background:var(--bg);color:var(--faint)!important}
+.admin-section-title{padding:10px 15px;font-size:12px;font-weight:bold;color:var(--gold);text-transform:uppercase;letter-spacing:1px;background:var(--bg);border-top:1px solid var(--bd2);border-bottom:1px solid var(--bd2);text-align:left}
+.admin-stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:12px}
+.admin-stat{background:linear-gradient(180deg,var(--bg2),var(--deep));border:1px solid var(--bd);border-radius:var(--r3);padding:12px 8px;text-align:center}
+.admin-stat-green{grid-column:span 2;background:linear-gradient(135deg,rgba(38,161,123,.15),rgba(38,161,123,.03));border-color:rgba(38,161,123,.5)}
+.admin-stat-icon{font-size:18px;margin-bottom:4px;line-height:1}
+.admin-stat-value{font-size:22px;font-weight:bold;color:var(--light);font-style:italic;line-height:1;margin-bottom:4px}
+.admin-stat-label{font-size:9px;color:var(--dim);text-transform:uppercase;letter-spacing:.8px}
+.admin-search-bar{display:flex;gap:5px;padding:10px;background:var(--bg2);border-bottom:1px solid var(--bd2)}
+.admin-search-bar input,.admin-search-bar select{background:var(--bg);border:1px solid var(--bd);color:var(--light);padding:7px 8px;border-radius:5px;font-size:12px;font-family:inherit}
+.admin-search-bar input{flex:1;min-width:0}
+.admin-search-bar button{background:var(--gb);border:1px solid var(--blue);color:#fff;padding:0 14px;border-radius:5px;cursor:pointer;font-size:14px}
+.admin-player-list{padding:10px;display:flex;flex-direction:column;gap:8px}
+.admin-card{background:var(--bg2);border:1px solid var(--bd);border-radius:var(--r3);overflow:hidden;transition:border-color .2s}
+.admin-card[open]{border-color:var(--blue);box-shadow:0 0 12px rgba(88,166,255,.15)}
+.admin-card-summary{display:flex;align-items:center;gap:10px;padding:10px 12px;cursor:pointer;list-style:none;transition:background .15s}
+.admin-card-summary::-webkit-details-marker{display:none}
+.admin-card-summary:active{background:#1c2128}
+.admin-card-avatar{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:bold;font-style:italic;color:#fff;flex-shrink:0;border:2px solid var(--bd2);text-shadow:0 1px 2px rgba(0,0,0,.5)}
+.admin-card-preview{width:60px;height:40px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.admin-card-preview .car-img{max-width:100%;max-height:40px;margin:0}
+.admin-card-info{flex:1;min-width:0;text-align:left}
+.admin-card-nick{font-size:13px;font-weight:bold;color:var(--light);font-style:italic;margin-bottom:3px;display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+.admin-card-meta{font-size:10px;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.admin-card-arrow{color:var(--faint);font-size:16px;transition:transform .2s;flex-shrink:0}
+.admin-card[open] .admin-card-arrow{transform:rotate(90deg);color:var(--blue)}
+.admin-card-body{padding:12px;border-top:1px solid var(--bd2);background:var(--bg)}
+
+.role-badge{display:inline-block;font-size:8px;padding:2px 6px;border-radius:3px;font-style:normal;font-weight:bold;letter-spacing:.5px;vertical-align:middle}
+.role-admin{background:linear-gradient(180deg,var(--gold2),var(--gold));color:#000}
+.role-mod{background:linear-gradient(180deg,var(--blue),var(--blue2));color:#fff}
+.role-ban{background:var(--gr);color:#fff}
+.role-starter{background:var(--gg);color:#fff}
+.role-super{background:linear-gradient(180deg,#ffd700,var(--gold));color:#000;box-shadow:0 0 8px rgba(255,215,0,.5)}
+
+.admin-form{margin-bottom:10px}
+.admin-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px}
+.admin-field{display:flex;flex-direction:column;gap:3px;margin-bottom:8px}
+.admin-field-wide{grid-column:span 2}
+.admin-field label{font-size:9px;font-weight:bold;text-align:left}
+.admin-field label small{text-transform:none;color:var(--faint);font-weight:normal;font-size:9px;letter-spacing:0}
+.admin-field input,.admin-field select,.admin-field textarea,.admin-inline-form input,.admin-inline-form select{width:100%;background:var(--bg2);border:1px solid var(--bd);color:var(--light);padding:8px 10px;border-radius:var(--r);font-size:13px;font-family:inherit;min-width:0}
+.admin-field input:focus,.admin-field select:focus,.admin-field textarea:focus,.admin-inline-form input:focus,.admin-inline-form select:focus{border-color:var(--blue);box-shadow:0 0 0 2px rgba(88,166,255,.15)}
+.admin-field textarea{resize:vertical}
+.admin-checkbox{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--tx);margin:8px 0;cursor:pointer;padding:6px 0;text-align:left}
+.admin-checkbox input{width:auto;accent-color:var(--blue)}
+.admin-subtitle{font-size:10px;color:var(--dim);text-transform:uppercase;letter-spacing:1px;font-weight:bold;padding:10px 0 6px;border-top:1px solid var(--bd2);margin-top:10px;text-align:left}
+.admin-quick-row{display:flex;gap:5px;flex-wrap:wrap}
+.admin-quick-row form{flex:1;min-width:60px}
+.admin-quick{width:100%;background:linear-gradient(180deg,var(--bg3),var(--bg2));border:1px solid var(--bd);color:var(--tx);padding:7px 5px;border-radius:var(--r);font-size:11px;font-weight:bold;cursor:pointer;font-family:inherit}
+.admin-quick:active{background:var(--blue2);color:#fff;border-color:var(--blue)}
+.admin-quick-danger{color:var(--red)}
+.admin-quick-danger:active{background:var(--red2);color:#fff}
+.admin-chips{display:flex;flex-wrap:wrap;gap:4px;padding:4px 0}
+.admin-chip{display:inline-flex;align-items:center;gap:4px;background:var(--bg3);color:var(--tx);padding:4px 4px 4px 10px;border-radius:14px;font-size:10px;border:1px solid var(--bd)}
+.admin-chip-x{background:var(--red);color:#fff;border:0;border-radius:50%;width:16px;height:16px;line-height:1;font-size:12px;cursor:pointer;padding:0;font-family:inherit}
+.admin-chip-empty{color:var(--faint);font-size:11px;font-style:italic}
+.admin-btn{display:inline-flex;align-items:center;justify-content:center;gap:5px;padding:9px 14px;border-radius:var(--r);font-size:11px;font-weight:bold;text-transform:uppercase;letter-spacing:.5px;border:1px solid;cursor:pointer;font-family:inherit;white-space:nowrap}
+.admin-btn:active{transform:translateY(1px)}
+.admin-btn-primary{background:var(--gb);border-color:var(--blue);color:#fff}
+.admin-btn-success{background:var(--gg);border-color:var(--green);color:#fff}
+.admin-btn-warn{background:var(--go);border-color:var(--gold2);color:#000}
+.admin-btn-danger{background:var(--gr);border-color:var(--red);color:#fff}
+.admin-btn-full{width:100%;padding:11px}
+.admin-inline-form{display:flex;gap:5px;margin-top:8px}
+.admin-inline-form input,.admin-inline-form select{flex:1;padding:8px 10px;font-size:12px}
+.admin-warning{padding:10px;background:rgba(210,153,34,.1);border:1px solid rgba(210,153,34,.4);border-radius:var(--r);color:var(--gold);font-size:11px;text-align:center;margin-bottom:8px}
+.admin-my-perms{padding:10px 12px;background:var(--bg);border-bottom:1px solid var(--bd2);text-align:left}
+.admin-my-perms-label{font-size:9px;color:var(--dim);text-transform:uppercase;letter-spacing:1px;font-weight:bold;margin-bottom:5px}
+.admin-my-perms-list{display:flex;flex-wrap:wrap;gap:4px}
+.perm-chip{display:inline-block;font-size:9px;padding:3px 8px;border-radius:10px;background:rgba(88,166,255,.15);color:var(--blue);border:1px solid rgba(88,166,255,.3);font-weight:bold;letter-spacing:.3px}
+.perm-chip-full{background:linear-gradient(180deg,var(--gold2),var(--gold));color:#000;border-color:var(--gold2)}
+.perm-chip-none{background:rgba(248,81,73,.1);color:var(--red);border-color:rgba(248,81,73,.3)}
+.perm-chip-small{display:inline-block;font-size:9px;padding:2px 6px;border-radius:8px;background:rgba(88,166,255,.1);color:var(--blue);margin:2px 2px 0 0;border:1px solid rgba(88,166,255,.2)}
+.admin-perm-info,.admin-perms-block{padding:8px 10px;background:rgba(88,166,255,.05);border:1px solid rgba(88,166,255,.2);border-radius:var(--r);text-align:left}
+.admin-perm-info{margin-bottom:10px}
+.admin-perms-block{margin-top:8px}
+.admin-perm-info-label{font-size:9px;color:var(--dim);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;font-weight:bold}
+.admin-perm-info-list{display:flex;flex-wrap:wrap;gap:3px}
+.admin-perms-title{font-size:10px;color:var(--blue);text-transform:uppercase;letter-spacing:.8px;font-weight:bold;margin-bottom:8px}
+.admin-perm-row{display:flex;align-items:flex-start;gap:8px;padding:6px 4px;cursor:pointer;border-radius:4px}
+.admin-perm-row:active{background:rgba(88,166,255,.1)}
+.admin-perm-row input{width:auto;margin-top:2px;accent-color:var(--blue);flex-shrink:0}
+.admin-perm-row span{font-size:11px;color:var(--tx);line-height:1.3;text-align:left}
+.admin-tour-actions{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+.admin-tour-actions form{flex:0 1 auto}
+.admin-tour-actions .admin-btn{flex:0 1 auto;padding:8px 12px}
+.admin-checkbox-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:8px;background:rgba(88,166,255,.04);border:1px solid rgba(88,166,255,.2);border-radius:var(--r);max-height:200px;overflow-y:auto;margin-top:6px}
+.admin-checkbox-grid .admin-checkbox{margin:0;padding:6px 8px;font-size:11px;border-radius:4px;background:rgba(0,0,0,.2);border:1px solid var(--bd2)}
+.admin-checkbox-grid .admin-checkbox:active{background:rgba(88,166,255,.15)}
+.admin-checkbox-item span{font-size:11px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:block}
+input[type=datetime-local]{color-scheme:dark;font-family:inherit}
+
+/* ==========================================================
+   ПОДВАЛ
+   ========================================================== */
+.footer{background:var(--bg2);padding:10px;font-size:11px;color:var(--faint);border-top:1px solid var(--bd2)}
+
+
+
+/* ==========================================
+   КАРТОЧКИ ТУРНИРОВ v2
+   ========================================== */
+.tour-card2 {
+    background: linear-gradient(180deg, var(--bg-mid) 0%, var(--deep) 100%);
+    border: 1px solid var(--bd);
+    border-radius: 10px;
+    padding: 12px;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    transition: border-color .15s;
+}
+.tour-card2::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--blue), transparent);
+    opacity: 0.4;
+}
+.tour-card2-live { border-color: var(--red2); }
+.tour-card2-live::before {
+    background: linear-gradient(90deg, transparent, var(--red2), transparent);
+    opacity: 0.9;
+    animation: livePulse 1.5s infinite;
+}
+.tour-card2-finished { opacity: 0.85; }
+.tour-card2-finished::before {
+    background: linear-gradient(90deg, transparent, #8b949e, transparent);
+    opacity: 0.3;
+}
+
+.tour-card2-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+.tour-card2-title {
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+    color: var(--light);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.tour-card2-type {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+
+.tour-card2-conditions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 10px;
+}
+.tour-tag-mini {
+    display: inline-block;
+    font-size: 9px;
+    padding: 2px 7px;
+    background: rgba(88,166,255,.08);
+    border: 1px solid rgba(88,166,255,.2);
+    color: var(--blue);
+    border-radius: 10px;
+    letter-spacing: .3px;
+}
+
+.tour-card2-dates {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    margin-bottom: 10px;
+    padding: 8px;
+    background: rgba(0,0,0,.2);
+    border-radius: 6px;
+}
+.tour-date-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    min-width: 0;
+    overflow: hidden;
+}
+.tour-date-icon {
+    font-size: 14px;
+    flex-shrink: 0;
+    opacity: 0.8;
+}
+.tour-date-item > div {
+    min-width: 0;
+    flex: 1;
+}
+.tour-date-item b {
+    display: block;
+    font-size: 11px;
+    color: var(--light);
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.tour-date-item small {
+    display: block;
+    font-size: 8px;
+    color: var(--dim);
+    text-transform: uppercase;
+    letter-spacing: .3px;
+    margin-top: 1px;
+}
+
+.tour-card2-timer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px;
+    background: linear-gradient(90deg, rgba(210,153,34,.12), rgba(210,153,34,.03));
+    border: 1px solid rgba(210,153,34,.3);
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+.tour-card2-timer-live {
+    background: linear-gradient(90deg, rgba(218,54,51,.12), rgba(218,54,51,.03));
+    border-color: rgba(218,54,51,.35);
+}
+.tour-timer-lbl {
+    font-size: 10px;
+    color: var(--dim);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+.tour-timer-val {
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+    color: var(--gold);
+}
+.tour-card2-timer-live .tour-timer-val { color: var(--red); }
+
+.tour-card2-prizes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 4px;
+    margin-bottom: 10px;
+}
+.tour-prize-mini {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 6px 4px;
+    background: rgba(0,0,0,.25);
+    border: 1px solid var(--bd2);
+    border-radius: 5px;
+    font-size: 11px;
+}
+.tour-prize-mini span { font-size: 13px; line-height: 1; }
+.tour-prize-mini b { color: var(--greenw); font-weight: bold; }
+.tour-prize-mini.prize-gold { border-color: rgba(240,198,116,.4); background: rgba(240,198,116,.06); }
+.tour-prize-mini.prize-silver { border-color: rgba(200,200,200,.3); }
+.tour-prize-mini.prize-bronze { border-color: rgba(205,127,50,.3); }
+.tour-prize-mini.prize-other { border-color: rgba(88,166,255,.25); }
+.tour-prize-mini.prize-other b { color: var(--blue); }
+
+.tour-card2-desc {
+    font-size: 11px;
+    color: var(--dim);
+    line-height: 1.4;
+    padding: 8px;
+    background: rgba(0,0,0,.15);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border-left: 2px solid rgba(88,166,255,.3);
+}
+
+.tour-card2-winner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background: linear-gradient(90deg, rgba(240,198,116,.1), rgba(240,198,116,.02));
+    border: 1px solid rgba(240,198,116,.3);
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+.tour-card2-winner > span {
+    font-size: 26px;
+    line-height: 1;
+    flex-shrink: 0;
+    filter: drop-shadow(0 0 10px rgba(255,215,0,.6));
+}
+.tour-card2-winner > div { text-align: left; min-width: 0; }
+.tour-card2-winner b {
+    display: block;
+    font-size: 13px;
+    color: var(--gold2);
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: .3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.tour-card2-winner small { font-size: 10px; color: var(--dim); }
+
+.tour-card2-actions { margin-top: 4px; }
+
+.tour-card2-join {
+    background-image: var(--go) !important;
+    border-color: var(--gold2) !important;
+    color: #000 !important;
+    font-weight: bold !important;
+    padding: 12px !important;
+    font-size: 13px !important;
+    letter-spacing: .5px !important;
+}
+.tour-card2-rides {
+    background-image: var(--gr) !important;
+    border-color: var(--red) !important;
+    font-weight: bold !important;
+    padding: 13px !important;
+    font-size: 14px !important;
+    letter-spacing: 1px !important;
+    box-shadow: 0 0 15px rgba(218,54,51,.35) !important;
+}
+.tour-card2-changecar {
+    background-image: linear-gradient(180deg,#8e44ad 0%,#6d357f 100%) !important;
+    border-color: #a855f7 !important;
+    font-weight: bold !important;
+    padding: 12px !important;
+    font-size: 12px !important;
+    letter-spacing: .5px !important;
+}
+.tour-card2-open {
+    background-image: var(--gr) !important;
+    border-color: var(--red) !important;
+    font-weight: bold !important;
+    padding: 12px !important;
+    font-size: 13px !important;
+    letter-spacing: .5px !important;
+}
+.tour-card2-mystatus {
+    padding: 12px;
+    background: linear-gradient(180deg, rgba(46,160,67,.12), rgba(46,160,67,.03));
+    border: 1px solid rgba(46,160,67,.4);
+    border-radius: 6px;
+    text-align: center;
+    color: var(--green);
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: .5px;
+    cursor: default;
+    user-select: none;
+}
+.tour-card2-leave {
+    width: 100%;
+    background: transparent;
+    border: 1px solid rgba(248,81,73,.4);
+    color: var(--red);
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: inherit;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+.tour-card2-leave:active { background: rgba(248,81,73,.1); }
+
+.tour-card2-locked {
+    padding: 10px;
+    background: rgba(248,81,73,.08);
+    border: 1px solid rgba(248,81,73,.3);
+    border-radius: 6px;
+    color: var(--red);
+    font-size: 11px;
+    text-align: center;
+    line-height: 1.4;
+}
+
+/* ==========================================
+   СЕЗОН v3 — компактный
+   ========================================== */
+.season-hero {
+    position: relative;
+    padding: 22px 15px;
+    text-align: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(210,153,34,0.12), rgba(13,17,23,0));
+    border-bottom: 1px solid var(--border-light);
+}
+.season-hero-bg {
+    position: absolute;
+    inset: -50%;
+    background: radial-gradient(circle, rgba(240,198,116,0.12) 0%, transparent 60%);
+    animation: seasonPulse 8s infinite;
+}
+@keyframes seasonPulse {
+    0%, 100% { transform: scale(1); opacity: 0.7; }
+    50% { transform: scale(1.1); opacity: 1; }
+}
+.season-hero-content { position: relative; z-index: 1; }
+.season-hero-badge {
+    display: inline-block;
+    background: linear-gradient(180deg, var(--gold-light), var(--gold));
+    color: #000;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 3px 10px;
+    border-radius: 4px;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+.season-hero-title {
+    font-size: 22px;
+    font-weight: bold;
+    font-style: italic;
+    color: var(--light);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+    text-shadow: 0 0 15px rgba(240,198,116,0.4);
+}
+.season-hero-dates { font-size: 11px; color: var(--text-dim); }
+.season-hero-days {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 2px 8px;
+    background: rgba(210,153,34,0.15);
+    color: var(--gold);
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.season-lvl-bar {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 15px;
+    background: var(--bg-mid);
+    border-bottom: 1px solid var(--border-light);
+}
+.season-lvl-circle {
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #d29922, #b8860b);
+    display: flex; align-items: center; justify-content: center;
+    color: #000;
+    font-size: 22px;
+    font-weight: bold;
+    font-style: italic;
+    flex-shrink: 0;
+    border: 2px solid #f0c674;
+    box-shadow: 0 0 15px rgba(210,153,34,0.5);
+}
+.season-lvl-info { flex: 1; text-align: left; min-width: 0; }
+.season-lvl-title { font-size: 12px; color: var(--light); margin-bottom: 5px; }
+.season-lvl-title b { color: var(--gold); font-size: 15px; }
+.season-lvl-progress {
+    height: 8px;
+    background: var(--bg-light);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 4px;
+}
+.season-lvl-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #d29922, #f0c674);
+    transition: width 0.3s;
+}
+.season-lvl-xp { font-size: 10px; color: var(--text-dim); }
+
+.season-next.ready {
+    background: linear-gradient(135deg, rgba(46,160,67,0.15), rgba(13,17,23,0.6));
+    border-color: rgba(46,160,67,0.6);
+    animation: readyPulse 1.8s infinite;
+}
+@keyframes readyPulse {
+    0%, 100% { box-shadow: 0 0 5px rgba(46,160,67,0.4); }
+    50% { box-shadow: 0 0 18px rgba(46,160,67,0.7); }
+}
+.season-next-done {
+    background: linear-gradient(135deg, rgba(240,198,116,0.15), rgba(13,17,23,0.6));
+    border-color: rgba(240,198,116,0.5);
+    text-align: center;
+}
+.season-next-label {
+    font-size: 10px;
+    color: var(--dim);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-align: left;
+}
+.season-next.ready .season-next-label { color: var(--green); }
+.season-next-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.season-next-num {
+    width: 46px; height: 46px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #1f6feb, #388bfd);
+    border: 2px solid var(--blue);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+    color: #fff;
+    flex-shrink: 0;
+}
+.season-next.ready .season-next-num {
+    background: linear-gradient(180deg, #2ea043, #238636);
+    border-color: var(--green);
+}
+.season-next-info { flex: 1; text-align: left; min-width: 0; }
+.season-next-title { font-size: 12px; color: var(--light); font-weight: bold; }
+.season-next-usdt { font-size: 15px; color: var(--greenw); font-weight: bold; margin-top: 2px; }
+.season-next-desc { font-size: 10px; color: var(--dim); margin-top: 2px; }
+.season-next-btn {
+    background: linear-gradient(180deg, #2ea043, #238636);
+    border: 1px solid var(--green);
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: inherit;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+}
+.season-next-lock { font-size: 22px; color: var(--text-faint); flex-shrink: 0; }
+.season-next-hint {
+    font-size: 10px;
+    color: var(--dim);
+    margin-top: 8px;
+    text-align: center;
+    letter-spacing: 0.3px;
+}
+
+.season-car-block {
+    padding: 15px;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border-light);
+    text-align: center;
+}
+.season-car-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+}
+.season-car-ready-badge {
+    background: linear-gradient(180deg, #2ea043, #238636);
+    color: #fff;
+    font-size: 9px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    letter-spacing: 0.5px;
+}
+.season-car-preview {
+    background: radial-gradient(ellipse at center, rgba(240,198,116,0.1) 0%, rgba(13,17,23,0) 75%);
+    padding: 10px 0;
+    border: 1px solid rgba(210,153,34,0.3);
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.season-car-preview .car-img { max-width: 70%; max-height: 100px; margin: 0 auto; }
+.season-car-info { margin-bottom: 12px; }
+.season-car-name {
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    color: var(--light);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+.season-car-stats { font-size: 12px; color: var(--text-dim); }
+.season-car-stats .hp { color: var(--gold); font-weight: bold; }
+.season-car-stats .class { color: var(--blue); font-weight: bold; }
+.season-car-claimed {
+    padding: 10px;
+    background: rgba(46,160,67,0.1);
+    border: 1px solid rgba(46,160,67,0.4);
+    border-radius: 6px;
+    color: var(--green);
+    font-weight: bold;
+    font-size: 12px;
+}
+.season-claim-btn {
+    background-image: linear-gradient(180deg, #2ea043 0%, #238636 100%) !important;
+    border-color: #3fb950 !important;
+    font-weight: bold !important;
+    padding: 13px !important;
+    font-size: 13px !important;
+}
+.season-unlock-banner {
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.season-unlock-locked {
+    background: rgba(142,68,173,0.1);
+    border: 1px solid rgba(142,68,173,0.4);
+    color: #a855f7;
+}
+.season-unlock-locked b { color: #d8b4fe; }
+.season-unlock-progress {
+    font-size: 11px;
+    color: var(--dim);
+    text-align: center;
+    padding: 4px 0;
+    letter-spacing: 0.3px;
+}
+
+.season-section-title {
+    padding: 12px 15px 6px;
+    font-size: 12px;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-align: left;
+}
+
+
+.season-rw-num {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    color: var(--dim);
+    line-height: 1;
+}
+.season-rw-usdt {
+    font-size: 9px;
+    color: var(--dim);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.season-rw-status { font-size: 11px; line-height: 1; }
+.season-rw.done {
+    background: linear-gradient(180deg, rgba(46,160,67,0.12), rgba(46,160,67,0.02));
+    border-color: rgba(46,160,67,0.4);
+    opacity: 0.7;
+}
+.season-rw.done .season-rw-num { color: var(--green); }
+.season-rw.done .season-rw-status { color: var(--green); }
+.season-rw.ready {
+    background: linear-gradient(180deg, rgba(46,160,67,0.2), rgba(46,160,67,0.05));
+    border-color: var(--green);
+    animation: readyPulse 1.8s infinite;
+}
+.season-rw.ready .season-rw-num { color: var(--green); }
+.season-rw.ready .season-rw-usdt { color: var(--greenw); font-weight: bold; }
+.season-rw.pending .season-rw-num { color: var(--gold); }
+.season-rw.pending .season-rw-usdt { color: var(--gold-light); }
+.season-rw.pending .season-rw-status { color: var(--gold); }
+.season-rw.locked .season-rw-status { color: var(--text-faint); opacity: 0.6; }
+
+.season-tasks { padding: 0 12px 12px; display: flex; flex-direction: column; gap: 8px; }
+.season-task {
+    background: var(--bg-mid);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 12px;
+    text-align: left;
+}
+.season-task.done {
+    background: linear-gradient(180deg, rgba(46,160,67,0.08), rgba(46,160,67,0.02));
+    border-color: rgba(46,160,67,0.3);
+    opacity: 0.75;
+}
+.season-task-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 4px;
+    align-items: flex-start;
+}
+.season-task-title { font-size: 13px; color: var(--light); font-weight: bold; flex: 1; min-width: 0; }
+.season-task-rewards { display: flex; gap: 6px; flex-shrink: 0; }
+.season-task-xp {
+    font-size: 10px;
+    color: var(--gold);
+    font-weight: bold;
+    background: rgba(210,153,34,0.1);
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+.season-task-usdt {
+    font-size: 10px;
+    color: var(--greenw);
+    font-weight: bold;
+    background: rgba(38,161,123,0.1);
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+.season-task-desc { font-size: 11px; color: var(--text-dim); margin-bottom: 8px; }
+.season-task-progress { display: flex; align-items: center; gap: 8px; }
+.season-task-bar {
+    flex: 1;
+    height: 6px;
+    background: var(--bg-light);
+    border-radius: 3px;
+    overflow: hidden;
+}
+.season-task-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    transition: width 0.3s;
+}
+.season-task-count { font-size: 10px; color: var(--text-dim); font-weight: bold; }
+
+.season-empty {
+    padding: 20px;
+    text-align: center;
+    color: var(--text-faint);
+    font-size: 12px;
+    font-style: italic;
+}
+
+/* Кнопка сезона в районе */
+.district-btn-season {
+    top: 210px;
+    left: 20px;
+    border-color: var(--gold);
+    background: linear-gradient(135deg, rgba(210,153,34,0.15), rgba(13,17,23,0.95));
+}
+.district-btn-season .district-btn-icon {
+    filter: drop-shadow(0 0 10px rgba(240,198,116,0.8));
+    animation: seasonStar 3s infinite;
+}
+@keyframes seasonStar {
+    0%, 100% { transform: scale(1) rotate(0); }
+    50% { transform: scale(1.1) rotate(10deg); }
+}
+
+/* Машина сезона — статус разблокировки */
+.season-unlock-banner {
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.season-unlock-ready {
+    background: linear-gradient(90deg, rgba(46,160,67,0.18), rgba(46,160,67,0.05));
+    border: 1px solid rgba(46,160,67,0.5);
+    color: var(--green);
+    animation: freePulse 2s infinite;
+}
+.season-unlock-locked {
+    background: rgba(142,68,173,0.1);
+    border: 1px solid rgba(142,68,173,0.4);
+    color: #a855f7;
+    letter-spacing: 0.3px;
+}
+.season-unlock-locked b { color: #d8b4fe; }
+
+.season-unlock-progress {
+    font-size: 11px;
+    color: var(--dim);
+    text-align: center;
+    padding: 8px 0;
+    letter-spacing: 0.3px;
+}
+.season-unlock-progress b { color: #a855f7; }
+/* ==========================================
+   ЗНАЧОК УВЕДОМЛЕНИЙ (в навигации)
+   ========================================== */
+.nav-tabs a {
+    position: relative;
+}
+.nav-badge {
+    position: absolute;
+    top: 3px;
+    right: 6px;
+    min-width: 16px;
+    height: 16px;
+    padding: 0 4px;
+    background: linear-gradient(180deg, #da3633, #b62324);
+    color: #fff;
+    font-size: 9px;
+    font-weight: bold;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #f85149;
+    box-shadow: 0 0 6px rgba(248,81,73,0.6);
+    animation: badgePulse 1.5s infinite;
+    z-index: 3;
+    line-height: 1;
+}
+@keyframes badgePulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 6px rgba(248,81,73,0.6); }
+    50% { transform: scale(1.1); box-shadow: 0 0 14px rgba(248,81,73,0.9); }
+}
+
+/* Значок на карточке сезона в районе */
+.district-card.has-badge {
+    border-color: #f0c674;
+    background: linear-gradient(135deg, rgba(248,81,73,0.15), rgba(13,17,23,0.95));
+}
+.district-badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    min-width: 22px;
+    height: 22px;
+    padding: 0 6px;
+    background: linear-gradient(180deg, #da3633, #b62324);
+    color: #fff;
+    font-size: 11px;
+    font-weight: bold;
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #f85149;
+    box-shadow: 0 0 10px rgba(248,81,73,0.8);
+    animation: badgePulse 1.5s infinite;
+    z-index: 3;
+}
+
+/* ==========================================
+   ЗАДАНИЯ С КНОПКОЙ "ЗАБРАТЬ"
+   ========================================== */
+.season-task.claimable {
+    background: linear-gradient(180deg, rgba(46,160,67,0.15), rgba(46,160,67,0.03));
+    border-color: rgba(46,160,67,0.6);
+    animation: taskReadyPulse 2s infinite;
+}
+@keyframes taskReadyPulse {
+    0%, 100% { box-shadow: 0 0 5px rgba(46,160,67,0.3); }
+    50% { box-shadow: 0 0 15px rgba(46,160,67,0.6); }
+}
+
+.season-task-claim {
+    width: 100%;
+    background: linear-gradient(180deg, #2ea043 0%, #238636 100%);
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1px solid #3fb950;
+    cursor: pointer;
+    font-family: inherit;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.2);
+    transition: all 0.15s;
+}
+.season-task-claim:active {
+    background: linear-gradient(180deg, #238636 0%, #2ea043 100%);
+    box-shadow: inset 0 2px 6px rgba(0,0,0,0.5);
+    transform: translateY(1px);
+}
+
+/* ==========================================
+   ОБЪЕДИНЁННЫЙ БЛОК НАГРАД
+   ========================================== */
+.season-rewards-block {
+    padding: 0 12px 12px;
+}
+.season-rewards-block .season-next {
+    margin: 0 0 10px 0;
+}
+/* ==========================================
+   КОМПАКТНЫЙ БЛОК НАГРАД
+   ========================================== */
+.season-rewards-block {
+    padding: 12px;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.season-rewards-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.season-rewards-title {
+    font-size: 12px;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+.season-rewards-counter {
+    font-size: 11px;
+    color: var(--dim);
+    font-weight: bold;
+    background: var(--bg-mid);
+    padding: 2px 8px;
+    border-radius: 10px;
+    border: 1px solid var(--border-light);
+}
+
+/* Компактная "Следующая цель" */
+.season-next-compact {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    background: linear-gradient(135deg, rgba(88,166,255,0.08), rgba(13,17,23,0.6));
+    border: 1px solid rgba(88,166,255,0.3);
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+.season-next-compact.ready {
+    background: linear-gradient(135deg, rgba(46,160,67,0.15), rgba(13,17,23,0.6));
+    border-color: rgba(46,160,67,0.6);
+    animation: readyPulse 1.8s infinite;
+}
+.season-next-compact.done {
+    background: linear-gradient(135deg, rgba(240,198,116,0.12), rgba(13,17,23,0.6));
+    border-color: rgba(240,198,116,0.4);
+    justify-content: center;
+}
+
+.season-next-c-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #1f6feb, #388bfd);
+    border: 2px solid var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    color: #fff;
+    flex-shrink: 0;
+}
+.season-next-compact.ready .season-next-c-num {
+    background: linear-gradient(180deg, #2ea043, #238636);
+    border-color: var(--green);
+}
+.season-next-compact.done .season-next-c-num {
+    background: linear-gradient(180deg, #d29922, #b8860b);
+    border-color: var(--gold-light);
+    font-size: 16px;
+}
+
+.season-next-c-info {
+    flex: 1;
+    min-width: 0;
+    text-align: left;
+}
+.season-next-c-title {
+    font-size: 11px;
+    color: var(--light);
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.season-next-compact.ready .season-next-c-title { color: var(--green); }
+.season-next-c-usdt {
+    font-size: 11px;
+    color: var(--greenw);
+    font-weight: bold;
+    margin-top: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.season-next-c-btn {
+    background: linear-gradient(180deg, #2ea043, #238636);
+    border: 1px solid var(--green);
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: inherit;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+}
+.season-next-c-btn:active {
+    background: linear-gradient(180deg, #238636, #2ea043);
+}
+
+.season-next-c-hint {
+    font-size: 10px;
+    color: var(--dim);
+    font-weight: bold;
+    background: var(--bg-mid);
+    padding: 3px 8px;
+    border-radius: 10px;
+    border: 1px solid var(--border-light);
+    flex-shrink: 0;
+}
+
+/* Компактная сетка наград */
+.season-rw-strip {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 4px;
+}
+.season-rw-cell {
+    padding: 5px 2px;
+    background: var(--bg-mid);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    transition: all 0.2s;
+    cursor: default;
+}
+.season-rw-cell-lvl {
+    font-size: 12px;
+    font-weight: bold;
+    font-style: italic;
+    color: var(--dim);
+    line-height: 1;
+}
+.season-rw-cell-usdt {
+    font-size: 8px;
+    color: var(--dim);
+    margin-top: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.season-rw-cell.done {
+    background: linear-gradient(180deg, rgba(46,160,67,0.15), rgba(46,160,67,0.03));
+    border-color: rgba(46,160,67,0.4);
+}
+.season-rw-cell.done .season-rw-cell-lvl { color: var(--green); }
+.season-rw-cell.done .season-rw-cell-usdt { color: var(--green); }
+.season-rw-cell.ready {
+    background: linear-gradient(180deg, rgba(46,160,67,0.25), rgba(46,160,67,0.08));
+    border-color: var(--green);
+    animation: readyPulse 1.8s infinite;
+}
+.season-rw-cell.ready .season-rw-cell-lvl { color: var(--green); }
+.season-rw-cell.ready .season-rw-cell-usdt { color: var(--greenw); font-weight: bold; }
+.season-rw-cell.pending .season-rw-cell-lvl { color: var(--gold); }
+.season-rw-cell.pending .season-rw-cell-usdt { color: var(--gold-light); }
+.season-rw-cell.locked { opacity: 0.55; }
+
+/* Компактная шапка сезона */
+.season-hero-compact {
+    padding: 14px 15px;
+}
+.season-hero-compact .season-hero-title {
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+.season-hero-compact .season-hero-badge {
+    font-size: 9px;
+    padding: 2px 8px;
+    margin-bottom: 6px;
+}
+
+/* ==========================================
+   МИНИ-КАРТОЧКИ В АДМИНКЕ (задания / награды)
+   ========================================== */
+.admin-mini-card {
+    background: var(--bg-mid);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    margin-bottom: 6px;
+    overflow: hidden;
+    transition: border-color 0.15s;
+}
+.admin-mini-card[open] {
+    border-color: var(--blue);
+    box-shadow: 0 0 10px rgba(88,166,255,0.15);
+}
+
+.admin-mini-summary {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    cursor: pointer;
+    list-style: none;
+    transition: background 0.15s;
+}
+.admin-mini-summary::-webkit-details-marker { display: none; }
+.admin-mini-summary:active { background: rgba(88,166,255,0.05); }
+
+.admin-mini-title {
+    font-size: 12px;
+    color: var(--light);
+    font-weight: bold;
+    flex-shrink: 0;
+    max-width: 45%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+
+.admin-mini-meta {
+    font-size: 10px;
+    color: var(--dim);
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1;
+    min-width: 0;
+}
+
+.admin-mini-arrow {
+    color: var(--text-faint);
+    font-size: 12px;
+    transition: transform 0.2s;
+    flex-shrink: 0;
+}
+.admin-mini-card[open] .admin-mini-arrow {
+    transform: rotate(90deg);
+    color: var(--blue);
+}
+
+.admin-mini-body {
+    padding: 10px;
+    border-top: 1px solid var(--border-light);
+    background: var(--bg);
+}
